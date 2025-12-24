@@ -1,17 +1,28 @@
 def project_profile_prompt(description: str) -> str:
     return f"""
-You are an expert cloud solution architect.
+SYSTEM ROLE:
+You are a deterministic information extraction engine.
+You do NOT explain, reason aloud, or generate examples.
+You ONLY extract structured data.
 
-Extract a structured project profile from the following description.
+TASK:
+Convert the given project description into a STRICTLY VALID JSON object.
 
-Rules:
-- Output ONLY valid JSON
-- Do NOT add explanations
-- Do NOT wrap in markdown
-- If a field is missing, use null or empty list
-- Budget must be a number (INR per month)
+ABSOLUTE OUTPUT RULES (NON-NEGOTIABLE):
+- Output MUST be valid JSON
+- Output MUST start with {{ and end with }}
+- Do NOT include markdown, code blocks, comments, or explanations
+- Do NOT include trailing commas
+- Do NOT invent technologies not implied by the description
+- Do NOT include additional keys beyond the defined schema
 
-Required JSON format:
+DATA NORMALIZATION RULES:
+- If a value is missing or unclear, use null (not empty string)
+- If a list has no items, return []
+- Budget MUST be a numeric value representing INR per month
+- If budget is not mentioned, estimate conservatively based on project scale
+
+SCHEMA (FOLLOW EXACTLY):
 {{
   "name": string,
   "budget_inr_per_month": number,
@@ -27,31 +38,48 @@ Required JSON format:
   "non_functional_requirements": [string]
 }}
 
-Project description:
+VALIDATION CHECK BEFORE RESPONDING:
+- Is the output valid JSON?
+- Are all required keys present?
+- Are all values using correct data types?
+
+PROJECT DESCRIPTION (SOURCE OF TRUTH):
 \"\"\"
 {description}
 \"\"\"
 """
 
-
 def billing_generation_prompt(project_profile: dict) -> str:
     return f"""
-You are a cloud cost simulation engine.
+SYSTEM ROLE:
+You are a cloud billing data generator.
+You generate DATA, not code, not explanations.
 
-Using the project profile below, generate realistic synthetic cloud billing data.
+TASK:
+Generate realistic synthetic cloud billing records based on the provided project profile.
 
-Rules:
-- Output ONLY valid JSON array
-- Do NOT return code.
-- Do NOT return markdown.
-- Do NOT add explanations.
-- 12 to 20 records
-- Monthly costs must roughly respect the project budget
-- Use realistic cloud services (compute, database, storage, networking, monitoring)
-- Include region and usage details
-- Cloud-agnostic (AWS / Azure / GCP allowed)
+ABSOLUTE OUTPUT RULES (NON-NEGOTIABLE):
+- Output MUST be a valid JSON ARRAY
+- Output MUST start with [ and end with ]
+- Do NOT include markdown
+- Do NOT include code
+- Do NOT include comments or explanations
+- Do NOT wrap output in quotes
+- Do NOT reference how the data was generated
 
-Each record format:
+DATA CONSTRAINTS:
+- Generate between 12 and 20 records
+- Each record represents a monthly billing item
+- Total monthly cost should be close to (but not wildly exceed) the budget
+- Costs must be realistic and non-negative
+- Use cloud services from AWS, Azure, or GCP only
+- Regions must be realistic cloud regions
+- Usage units must match usage type
+
+ALLOWED USAGE TYPES:
+Compute, Storage, Database, Networking, Monitoring
+
+SCHEMA (FOLLOW EXACTLY):
 {{
   "month": "YYYY-MM",
   "service": string,
@@ -64,26 +92,47 @@ Each record format:
   "desc": string
 }}
 
-Project profile:
+VALIDATION CHECK BEFORE RESPONDING:
+- Is the output valid JSON?
+- Is the output an array?
+- Are there 12–20 objects?
+- Does every object match the schema exactly?
+
+PROJECT PROFILE (READ-ONLY INPUT):
 {project_profile}
 """
 
-
 def cost_analysis_prompt(project_profile: dict, billing_data: list) -> str:
     return f"""
-You are a cloud cost optimization expert.
+SYSTEM ROLE:
+You are a cloud cost optimization analyst.
+You produce structured analytical output only.
 
-Analyze the billing data and generate a cost optimization report.
+TASK:
+Analyze the provided billing data and generate a cost optimization report.
 
-Rules:
-- Output ONLY valid JSON
-- Do NOT return code.
-- Do NOT return markdown.
+ABSOLUTE OUTPUT RULES (NON-NEGOTIABLE):
+- Output MUST be valid JSON
+- Do NOT include markdown
+- Do NOT include code
+- Do NOT include explanations outside JSON
+- Do NOT invent billing data
+- Use ONLY the provided inputs
+
+ANALYSIS RULES:
+- total_monthly_cost must be the sum of all billing records
+- budget must match project_profile budget
+- budget_variance = budget - total_monthly_cost
+- is_over_budget must be logically correct
+
+RECOMMENDATION RULES:
 - Provide 6 to 10 recommendations
-- Recommendations must include AWS, Azure, GCP, and open-source options
-- Include savings, risks, and implementation effort
+- Include AWS, Azure, GCP, AND open-source options overall
+- Savings must be realistic and <= current_cost
+- Risks and effort must be justified
+- Avoid generic advice
 
-Required JSON format:
+SCHEMA (FOLLOW EXACTLY):
 {{
   "project_name": string,
   "analysis": {{
@@ -108,9 +157,14 @@ Required JSON format:
   ]
 }}
 
-Project profile:
+VALIDATION CHECK BEFORE RESPONDING:
+- Is output valid JSON?
+- Are numeric fields numbers (not strings)?
+- Are enums strictly followed?
+
+PROJECT PROFILE:
 {project_profile}
 
-Billing data:
+BILLING DATA:
 {billing_data}
 """

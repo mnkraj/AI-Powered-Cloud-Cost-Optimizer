@@ -1,4 +1,3 @@
-An internal dashboard for a college that allows students to check their attendance percentage and CGPA
-by entering their registration number. The system should automatically fetch data from internal portals,
-generate reports, and allow faculty to upload updated records. Reliability and data accuracy are critical.
-The application will mainly be used during exam and result declaration periods.
+A lightweight healthcare monitoring system that collects sensor data from wearable IoT devices and
+stores patient vitals in real time. Doctors should be able to view dashboards and receive alerts when
+thresholds are crossed. The system must be highly available, secure, and optimized for low latency.
