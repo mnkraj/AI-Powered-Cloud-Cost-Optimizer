@@ -94,7 +94,7 @@ pip install -r requirements.txt
 ### 3️⃣ Configure Environment Variables
 
 ```bash
-HF_API_KEY=huggingface_api_token sample:  #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 
+HF_API_KEY=huggingface_api_token 
 HF_MODEL =    #meta-llama/Meta-Llama-3-8B-Instruct:novita
 HF_API_BASE_URL = #https://router.huggingface.co/v1/chat/completions
 
