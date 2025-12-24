@@ -128,12 +128,11 @@ python main.py
 You will see a menu:
 
 ```
-1. Extract Project Profile
-2. Generate Mock Billing
-3. Analyze Costs & Optimization
-4. Run Full Pipeline
-5. View Output Files
-6. Exit
+1. Enter new project description
+2. Extract Project Profile
+3. Generate mock billing data
+4. Generate cost optimization report
+5. Exit
 ```
 
 ---
