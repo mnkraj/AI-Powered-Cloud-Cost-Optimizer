@@ -1,0 +1,4 @@
+An internal dashboard for a college that allows students to check their attendance percentage and CGPA
+by entering their registration number. The system should automatically fetch data from internal portals,
+generate reports, and allow faculty to upload updated records. Reliability and data accuracy are critical.
+The application will mainly be used during exam and result declaration periods.
