@@ -1,0 +1,18 @@
+{
+  "name": "Lightweight Healthcare Monitoring System",
+  "budget_inr_per_month": 500000.0,
+  "description": "A lightweight healthcare monitoring system that collects sensor data from wearable IoT devices and stores patient vitals in real time. Doctors should be able to view dashboards and receive alerts when thresholds are crossed. The system must be highly available, secure, and optimized for low latency.",
+  "tech_stack": {
+    "frontend": "Web Application Framework",
+    "backend": "Cloud-based API",
+    "database": "Relational Database",
+    "storage": "Cloud Storage",
+    "monitoring": "Cloud-based Monitoring Service",
+    "hosting": "Cloud Hosting Service"
+  },
+  "non_functional_requirements": [
+    "Highly available",
+    "Secure",
+    "Low latency"
+  ]
+}

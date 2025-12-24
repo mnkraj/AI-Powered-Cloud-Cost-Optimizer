@@ -1,0 +1,167 @@
+[
+  {
+    "month": "2024-03",
+    "service": "AWS",
+    "resource_id": "arn:aws:s3:::mydata",
+    "region": "us-west-2",
+    "usage_type": "Storage",
+    "usage_quantity": 10.0,
+    "unit": "GB",
+    "cost_inr": 8000.0,
+    "desc": "Data Storage for Patient Vitals"
+  },
+  {
+    "month": "2024-03",
+    "service": "GCP",
+    "resource_id": " projects/myproject/zones/us-central1-f/disks/data_disk",
+    "region": "us-central1",
+    "usage_type": "Storage",
+    "usage_quantity": 1.0,
+    "unit": "GB",
+    "cost_inr": 200.0,
+    "desc": "Database Disk for Patient Records"
+  },
+  {
+    "month": "2024-03",
+    "service": "AWS",
+    "resource_id": "arn:aws:ec2:us-west-2:myaccount:instance/i-1234567890abcdef0",
+    "region": "us-west-2",
+    "usage_type": "Compute",
+    "usage_quantity": 2.0,
+    "unit": "vCPU",
+    "cost_inr": 10000.0,
+    "desc": "EC2 Instance for Data Processing"
+  },
+  {
+    "month": "2024-04",
+    "service": "Azure",
+    "resource_id": "/subscriptions/mysubscription/resourcegroups/mygroup/providers/Microsoft.Network/networkInterfaces/myinterface",
+    "region": "westus2",
+    "usage_type": "Networking",
+    "usage_quantity": 1.0,
+    "unit": "Mbps",
+    "cost_inr": 500.0,
+    "desc": "Network Interface for IoT Devices"
+  },
+  {
+    "month": "2024-03",
+    "service": "GCP",
+    "resource_id": "projects/myproject/global/loggings/mylog",
+    "region": "global",
+    "usage_type": "Monitoring",
+    "usage_quantity": 1.0,
+    "unit": "log",
+    "cost_inr": 1000.0,
+    "desc": "Cloud Logging for System Monitoring"
+  },
+  {
+    "month": "2024-03",
+    "service": "AWS",
+    "resource_id": "arn:aws:dynamodb:us-west-2:myaccount:table/mytable",
+    "region": "us-west-2",
+    "usage_type": "Database",
+    "usage_quantity": 1.0,
+    "unit": "read capacity unit",
+    "cost_inr": 5000.0,
+    "desc": "DynamoDB Table for Patient Records"
+  },
+  {
+    "month": "2024-04",
+    "service": "Azure",
+    "resource_id": "/subscriptions/mysubscription/resourcegroups/mygroup/providers/Microsoft.DBforPostgreSQL/servers/myserver",
+    "region": "westus2",
+    "usage_type": "Database",
+    "usage_quantity": 1.0,
+    "unit": "vCore",
+    "cost_inr": 2000.0,
+    "desc": "Azure Database for PostgreSQL"
+  },
+  {
+    "month": "2024-05",
+    "service": "GCP",
+    "resource_id": "projects/myproject/zones/us-central1-f/disks/mydisk",
+    "region": "us-central1",
+    "usage_type": "Storage",
+    "usage_quantity": 5.0,
+    "unit": "GB",
+    "cost_inr": 3500.0,
+    "desc": "Persistent Disk for System Logs"
+  },
+  {
+    "month": "2024-03",
+    "service": "AWS",
+    "resource_id": "arn:aws:cloudwatch:us-west-2:myaccount:alarm/myalarm",
+    "region": "us-west-2",
+    "usage_type": "Monitoring",
+    "usage_quantity": 1.0,
+    "unit": "alarm",
+    "cost_inr": 200.0,
+    "desc": "CloudWatch Alarm for System Monitoring"
+  },
+  {
+    "month": "2024-04",
+    "service": "AWS",
+    "resource_id": "arn:aws:ec2:us-west-2:myaccount:instance/i-9876543210fedcba1",
+    "region": "us-west-2",
+    "usage_type": "Compute",
+    "usage_quantity": 1.0,
+    "unit": "vCPU",
+    "cost_inr": 5000.0,
+    "desc": "EC2 Instance for Data Processing"
+  },
+  {
+    "month": "2024-05",
+    "service": "Azure",
+    "resource_id": "/subscriptions/mysubscription/resourcegroups/mygroup/providers/Microsoft.Network/virtualNetworks/myvnet",
+    "region": "westus2",
+    "usage_type": "Networking",
+    "usage_quantity": 1.0,
+    "unit": "Mbps",
+    "cost_inr": 250.0,
+    "desc": "Virtual Network for IoT Devices"
+  },
+  {
+    "month": "2024-03",
+    "service": "GCP",
+    "resource_id": "projects/myproject/global/monitoring/mymetric",
+    "region": "global",
+    "usage_type": "Monitoring",
+    "usage_quantity": 1.0,
+    "unit": "metric",
+    "cost_inr": 1500.0,
+    "desc": "Cloud Monitoring for System Monitoring"
+  },
+  {
+    "month": "2024-04",
+    "service": "AWS",
+    "resource_id": "arn:aws:s3:::mybackup",
+    "region": "us-west-2",
+    "usage_type": "Storage",
+    "usage_quantity": 20.0,
+    "unit": "GB",
+    "cost_inr": 12000.0,
+    "desc": "Backup Data Storage"
+  },
+  {
+    "month": "2024-05",
+    "service": "Azure",
+    "resource_id": "/subscriptions/mysubscription/resourcegroups/mygroup/providers/Microsoft.DBforPostgreSQL/servers/myserver/virtualNetworks/myvnet",
+    "region": "westus2",
+    "usage_type": "Database",
+    "usage_quantity": 1.0,
+    "unit": "vCore",
+    "cost_inr": 2500.0,
+    "desc": "Azure Database for PostgreSQL"
+  },
+  {
+    "month": "2024-03",
+    "service": "AWS",
+    "resource_id": "arn:aws:cloudwatch:us-west-2:myaccount:dashboard/mydashboard",
+    "region": "us-west-2",
+    "usage_type": "Monitoring",
+    "usage_quantity": 1.0,
+    "unit": "dashboard",
+    "cost_inr": 500.0,
+    "desc": "CloudWatch Dashboard for System Monitoring"
+  }
+]

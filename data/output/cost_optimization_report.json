@@ -1,0 +1,122 @@
+{
+  "project_name": "Lightweight Healthcare Monitoring System",
+  "analysis": {
+    "total_monthly_cost": 132000,
+    "budget": 500000,
+    "budget_variance": -380000,
+    "service_costs": {
+      "AWS": 72000,
+      "GCP": 50000,
+      "Azure": 4250
+    },
+    "is_over_budget": false
+  },
+  "recommendations": [
+    {
+      "title": "Migrate AWS EC2 instances to GCP Compute Engine",
+      "service": "GCP",
+      "current_cost": 18000,
+      "potential_savings": 10000,
+      "recommendation_type": "Migration",
+      "description": "Migrating AWS EC2 instances to GCP Compute Engine can help reduce costs and improve performance. Savings can be achieved by taking advantage of GCP's flexible pricing and instance types.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "cloud_providers": [
+        "AWS",
+        "GCP"
+      ]
+    },
+    {
+      "title": "Optimize DynamoDB table usage",
+      "service": "AWS",
+      "current_cost": 5000,
+      "potential_savings": 2000,
+      "recommendation_type": "Optimization",
+      "description": "Optimizing DynamoDB table usage can help reduce costs by minimizing read capacity units. Savings can be achieved by implementing data compression and using more efficient query patterns.",
+      "implementation_effort": "low",
+      "risk_level": "low",
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Use Azure Database for PostgreSQL",
+      "service": "Azure",
+      "current_cost": 4250,
+      "potential_savings": 500,
+      "recommendation_type": "Switch",
+      "description": "Switching to Azure Database for PostgreSQL can help reduce costs and improve performance. Savings can be achieved by taking advantage of Azure's flexible pricing and instance types.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "cloud_providers": [
+        "Azure"
+      ]
+    },
+    {
+      "title": "Implement data backup using GCP Cloud Storage",
+      "service": "GCP",
+      "current_cost": 3500,
+      "potential_savings": 500,
+      "recommendation_type": "Implementation",
+      "description": "Implementing data backup using GCP Cloud Storage can help reduce costs and improve data security. Savings can be achieved by taking advantage of GCP's flexible pricing and storage options.",
+      "implementation_effort": "low",
+      "risk_level": "low",
+      "cloud_providers": [
+        "GCP"
+      ]
+    },
+    {
+      "title": "Use AWS S3 Transfer Acceleration",
+      "service": "AWS",
+      "current_cost": 8000,
+      "potential_savings": 1000,
+      "recommendation_type": "Optimization",
+      "description": "Using AWS S3 Transfer Acceleration can help reduce costs and improve data transfer performance. Savings can be achieved by taking advantage of AWS's flexible pricing and acceleration options.",
+      "implementation_effort": "low",
+      "risk_level": "low",
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Migrate Azure Database to GCP Cloud SQL",
+      "service": "GCP",
+      "current_cost": 2500,
+      "potential_savings": 1000,
+      "recommendation_type": "Migration",
+      "description": "Migrating Azure Database to GCP Cloud SQL can help reduce costs and improve performance. Savings can be achieved by taking advantage of GCP's flexible pricing and instance types.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "cloud_providers": [
+        "Azure",
+        "GCP"
+      ]
+    },
+    {
+      "title": "Optimize CloudWatch monitoring",
+      "service": "AWS",
+      "current_cost": 200,
+      "potential_savings": 50,
+      "recommendation_type": "Optimization",
+      "description": "Optimizing CloudWatch monitoring can help reduce costs by minimizing alarm usage. Savings can be achieved by implementing data compression and using more efficient query patterns.",
+      "implementation_effort": "low",
+      "risk_level": "low",
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Use GCP Persistent Disk for system logs",
+      "service": "GCP",
+      "current_cost": 3500,
+      "potential_savings": 500,
+      "recommendation_type": "Switch",
+      "description": "Switching to GCP Persistent Disk for system logs can help reduce costs and improve performance. Savings can be achieved by taking advantage of GCP's flexible pricing and storage options.",
+      "implementation_effort": "low",
+      "risk_level": "low",
+      "cloud_providers": [
+        "GCP"
+      ]
+    }
+  ]
+}
