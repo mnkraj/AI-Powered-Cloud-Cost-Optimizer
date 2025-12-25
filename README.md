@@ -13,6 +13,14 @@ This project takes a natural language project description, extracts a structured
 * 🧱 Clean **modular pipeline architecture**
 * 🖥️ Simple **CLI interface**
 * 🔒 Strict **JSON-only outputs** for reliability
+---
+
+## 🎥 Demo Video
+
+A short demo video demonstrating the complete working of the **Cloud Cost Optimizer CLI**, including project profiling, billing generation, and cost optimization analysis:
+
+👉 **Project Demo Video (Google Drive – MP4):**  
+https://drive.google.com/file/d/1S1FpjmvOoAACM7PeFHFHXWkjCWCVHJH3/view
 
 ---
 
@@ -183,27 +191,5 @@ data/output/
 
 ---
 
-## 🤝 Contributing
+## 🏗️ Project Architecture
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit changes with clear messages
-4. Open a Pull Request
-
----
-
-## 📜 License
-
-This project is released under the **MIT License**.
-
----
-
-## ⭐ Acknowledgements
-
-* Hugging Face Inference API
-* Open-source cloud pricing references
-* LLM prompt engineering best practices
-
----
-
-**Developed as a prerequisite assignment to formally demonstrate Python proficiency, modular system design, and practical problem‑solving skills prior to the commencement of an internship.** ☁️📉
